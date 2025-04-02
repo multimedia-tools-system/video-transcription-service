@@ -4,7 +4,7 @@ package protobuf;
 
 service TranscribeSender
 {
-  rpc SendTranscribe (RequestTranscribe) returns (ResponseTranscribe);
+  rpc sendTranscribe (RequestTranscribe) returns (stream ResponseTranscribe);
 }
 
 message RequestTranscribe
@@ -16,5 +16,7 @@ message RequestTranscribe
 
 message ResponseTranscribe
 {
-  string transcribe = 1;
+  int32 progress = 1;
+  string status = 2;
+  string transcribe = 3;
 }
