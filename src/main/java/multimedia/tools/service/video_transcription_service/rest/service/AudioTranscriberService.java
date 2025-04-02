@@ -1,11 +1,11 @@
-package multimedia.tools.service.video_transcription_service.application.service;
+package multimedia.tools.service.video_transcription_service.rest.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import static multimedia.tools.service.video_transcription_service.util.WebServiceConstant.*;
+import static multimedia.tools.service.video_transcription_service.rest.util.WebServiceConstant.*;
 
 @Service
 @RequiredArgsConstructor

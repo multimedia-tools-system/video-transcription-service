@@ -1,4 +1,4 @@
-package multimedia.tools.service.video_transcription_service.util;
+package multimedia.tools.service.video_transcription_service.rest.util;
 
 public class FilePathConstant
 {

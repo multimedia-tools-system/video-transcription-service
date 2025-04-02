@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_package = "multimedia.tools.service.video_transcription_service.grpc.protobuf";
+package protobuf;
+
+service TranscribeSender
+{
+  rpc SendTranscribe (RequestTranscribe) returns (ResponseTranscribe);
+}
+
+message RequestTranscribe
+{
+  string model = 1;
+  string fileStoragePath = 2;
+  string operation = 3;
+}
+
+message ResponseTranscribe
+{
+  string transcribe = 1;
+}

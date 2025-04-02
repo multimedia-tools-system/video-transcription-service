@@ -1,8 +1,8 @@
 package multimedia.tools.service.video_transcription_service.rest.controller;
 
 import lombok.RequiredArgsConstructor;
-import multimedia.tools.service.video_transcription_service.application.service.AudioTranscriberService;
-import multimedia.tools.service.video_transcription_service.util.FilePathUtil;
+import multimedia.tools.service.video_transcription_service.rest.service.AudioTranscriberService;
+import multimedia.tools.service.video_transcription_service.rest.util.FilePathUtil;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
