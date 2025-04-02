@@ -19,6 +19,7 @@ public class MultimediaReaderController
 
     private final AudioTranscriberService audioTranscriberService;
 
+    @CrossOrigin(origins = "http://localhost:3001")
     @PostMapping(value = "/audio/upload",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
