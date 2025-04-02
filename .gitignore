@@ -60,3 +60,9 @@ build/
 node_modules/
 
 saved_documents/
+
+models/
+
+storage/
+
+.env
