@@ -28,6 +28,9 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<flyway.user>${env.PGSQL_USERNAME}</flyway.user>
+		<flyway.password>${env.PGSQL_PASSWORD}</flyway.password>
+		<flyway.url>jdbc:postgresql://${env.PGSQL_URL}:5432/${env.PGSQL_DB}</flyway.url>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -165,6 +168,18 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>10.12.0</version>
+				<configuration>
+					<url>${flyway.url}</url>
+					<user>${flyway.user}</user>
+					<password>${flyway.password}</password>
+					<cleanDisabled>false</cleanDisabled>
+					<schemas>public</schemas>
 				</configuration>
 			</plugin>
 		</plugins>
